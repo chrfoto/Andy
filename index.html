@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>XV Años - Andrea Karina López Navarro</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: 
+         - Great Vibes (Cursive/Floreada para la portada)
+         - Cormorant Garamond (Serif clásica formal de alta costura)
+         - Montserrat (Sans-serif moderno y limpio para textos formales)
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate On Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            /* Fusión premium: Lila, Lavanda y Azul Rey/Índigo */
+            --color-light-bg: #f3f1f7; /* Base lila muy clara */
+            --color-lila-soft: #eedff7; /* Lila pastel suave */
+            --color-azul-soft: #e0e7ff; /* Azul índigo muy claro */
+            --color-lila-accent: #a78bfa; /* Violeta acento */
+            --color-azul-accent: #6366f1; /* Indigo / Azul rey acento */
+            --color-lila-dark: #7b51a8; /* Lavanda de alta costura */
+            --color-azul-dark: #1e3a8a; /* Azul marino imperial */
+            --color-blue-deep: #0f172a; /* Azul de contraste supremo */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-blue-deep);
+            background-color: var(--color-light-bg);
+            overflow-x: hidden;
+        }
+
+        .font-serif-elegant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-floreada {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* Textura de fondo con gradiente dual: Azul índigo suave arriba, Lila suave abajo */
+        .bg-ballet-texture {
+            background-image: linear-gradient(135deg, rgba(224, 231, 255, 0.94), rgba(243, 232, 255, 0.96)), url('https://i.imgur.com/r035ySS.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* Bordes y detalles en la nueva paleta */
+        .lila-border {
+            border: 1px solid rgba(167, 139, 250, 0.4); /* Lila translúcido */
+        }
+
+        .double-lila-border {
+            border: 1px solid rgba(167, 139, 250, 0.4); /* Lila acento */
+            outline: 4px solid rgba(99, 102, 241, 0.25); /* Azul rey translúcido */
+            outline-offset: -8px;
+        }
+
+        /* Animación del sello de cera en la gama lila-azul */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(123, 81, 168, 0.45); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+        }
+
+        .pulse-wax-seal {
+            animation: pulse-ring 2.5s infinite;
+        }
+
+        /* Partículas flotantes */
+        @keyframes float-up {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.35; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+            animation: float-up 15s linear infinite;
+        }
+
+        /* Sombra de texto protectora fuerte para legibilidad sin oscurecer la foto */
+        .text-protection-shadow {
+            text-shadow: 0 2px 16px rgba(15, 23, 42, 0.98), 0 1px 6px rgba(0,0,0,0.9), 0 0 20px rgba(15, 23, 42, 0.5);
+        }
+        
+        .subtext-protection-shadow {
+            text-shadow: 0 2px 10px rgba(15, 23, 42, 0.95), 0 1px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Mouse de scroll animado */
+        .scroll-mouse {
+            width: 20px;
+            height: 32px;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            position: relative;
+            margin: 8px auto 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+        .scroll-mouse::before {
+            content: '';
+            width: 4px;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 2px;
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scroll-wheel-anim 1.6s infinite;
+        }
+        @keyframes scroll-wheel-anim {
+            0% { top: 6px; opacity: 1; }
+            50% { top: 14px; opacity: 0; }
+            100% { top: 6px; opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-ballet-texture selection:bg-violet-100 selection:text-indigo-900">
+
+    <audio id="bg-music" loop>
+        <source src="https://www.dropbox.com/scl/fi/pxvszrxcdkpp19donv8xq/JENNIE-Starlight-Official-Lyric-Video.mp3?rlkey=t6xvzrcokchk7chosng00w92m&st=e3h2fage&raw=1" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <!-- PANTALLA DE BIENVENIDA / ENVELOPE (SOBRE INTERACTIVO) -->
+    <div id="welcome-envelope" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#f3f1f7] transition-all duration-1000 overflow-hidden px-4">
+        <!-- Textura de fondo ligera en el sobre -->
+        <div class="absolute inset-0 opacity-[0.06]" style="background-image: url('https://i.imgur.com/r035ySS.jpg'); background-size: cover; background-position: center;"></div>
+        
+        <!-- Elementos decorativos flotando sutilmente -->
+        <div class="absolute inset-0 pointer-events-none overflow-hidden" id="envelope-particles"></div>
+
+        <!-- Cuerpo del sobre elegante -->
+        <div class="relative max-w-lg w-full bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(99,102,241,0.1)] border border-violet-100 text-center flex flex-col items-center z-10" data-aos="zoom-in" data-aos-duration="1200">
+            <!-- Icono de zapatillas de ballet en SVG color Lila/Azul -->
+            <div class="w-16 h-16 mb-6 text-violet-500 opacity-80">
+                <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
+                    <path d="M50,15 C52,20 56,23 62,23 C62,23 64,17 58,15 C54,13 51,14 50,15 Z" />
+                    <path d="M50,15 C48,20 44,23 38,23 C38,23 36,17 42,15 C46,13 49,14 50,15 Z" />
+                </svg>
+            </div>
+
+            <!-- Título personalizado de bienvenida -->
+            <div id="envelope-welcome-guest" class="mb-5 hidden text-center">
+                <p class="text-[10px] uppercase tracking-[0.25em] text-gray-400 font-bold">Invitación Especial Para</p>
+                <p id="envelope-guest-name" class="font-serif-elegant font-bold text-xl text-indigo-950 mt-1.5 tracking-wider"></p>
+            </div>
+
+            <p class="text-[9px] uppercase tracking-[0.3em] text-indigo-600/90 font-bold mb-3">Estás invitado a celebrar los XV años de</p>
+            
+            <h1 class="font-floreada text-5xl text-indigo-950 font-light tracking-wide leading-snug">
+                Andrea Karina
+            </h1>
+            <h2 class="font-serif-elegant text-lg uppercase tracking-[0.25em] text-gray-500 mt-1 mb-6">López Navarro</h2>
+            
+            <div class="w-24 h-[1px] bg-indigo-100 my-1"></div>
+            
+            <p class="text-[10px] uppercase tracking-[0.25em] text-gray-500 mt-3 mb-8">
+                Morelia, Michoacán <br>
+                <span class="text-indigo-600 font-bold">09.10.2026</span>
+            </p>
+
+            <!-- Botón Sello de Cera interactivo -->
+            <button onclick="revealInvitation()" class="pulse-wax-seal relative group cursor-pointer w-24 h-24 bg-gradient-to-tr from-[#7b51a8] to-indigo-600 hover:from-[#5d3882] hover:to-indigo-700 rounded-full flex flex-col items-center justify-center border-4 border-white shadow-[0_8px_30px_rgba(99,102,241,0.25)] transition-all duration-300">
+                <i class="fa-solid fa-envelope-open text-white text-2xl group-hover:scale-110 transition-transform duration-300 mb-1"></i>
+                <span class="text-[9px] text-white uppercase tracking-widest font-bold">ABRIR</span>
+            </button>
+            
+            <p class="text-[9px] text-gray-400 mt-5 italic">Toca para abrir la invitación y reproducir música</p>
+        </div>
+    </div>
+
+    <!-- REPRODUCTOR DE MÚSICA FLOTANTE -->
+    <div id="music-widget" class="fixed bottom-6 right-6 z-40 flex items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-[0_5px_20px_rgba(99,102,241,0.15)] border border-violet-100 hidden transition-all duration-500">
+        <div id="playing-wave" class="flex gap-[3px] items-end h-3 w-4">
+            <span class="bg-indigo-500 w-[2px] rounded-full animate-[bounce_1s_infinite_100ms]"></span>
+            <span class="bg-[#7b51a8] w-[2px] rounded-full animate-[bounce_1s_infinite_300ms] h-full"></span>
+            <span class="bg-indigo-500 w-[2px] rounded-full animate-[bounce_1s_infinite_200ms]"></span>
+        </div>
+        <button id="music-btn" onclick="toggleMusicPlayback()" class="w-9 h-9 rounded-full bg-gradient-to-r from-[#7b51a8] to-indigo-600 hover:from-[#5d3882] hover:to-indigo-700 text-white flex items-center justify-center shadow-sm transition-colors duration-300 focus:outline-none">
+            <i id="music-control-icon" class="fa-solid fa-music"></i>
+        </button>
+        <div class="text-left pr-2 text-xs">
+            <p class="text-[8px] uppercase tracking-wider text-indigo-600 font-bold">Música de fondo</p>
+            <p class="text-[10px] text-indigo-950 font-semibold truncate max-w-[100px]">Starlight - Jennie</p>
+        </div>
+    </div>
+
+    <!-- CONTENIDO DE LA INVITACIÓN -->
+    <main id="main-invitation-content" class="min-h-screen opacity-0 transition-opacity duration-1000 max-w-xl mx-auto px-0 py-0 space-y-20 relative z-10 bg-[#f3f1f7]/60 shadow-2xl">
+        
+        <!-- HEADER / PORTADA PRINCIPAL (Modificada para eliminar oscurecimiento y resaltar la foto) -->
+        <header class="relative w-full h-[100vh] min-h-[750px] flex flex-col justify-between items-center text-center overflow-hidden px-6 pb-14 pt-24">
+            <!-- Capa con la imagen de fondo de Andrea Karina (Luminosidad 100% natural) -->
+            <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://i.imgur.com/c7RVv86.jpg');"></div>
+            
+            <!-- GRADIENTE DE TRANSICIÓN INFERIOR ÚNICAMENTE (No oscurece arriba, solo mezcla suavemente abajo) -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-t from-[#f3f1f7] via-[#f3f1f7]/10 to-transparent to-50%"></div>
+
+            <!-- Contenido superior sobrepuesto en la foto -->
+            <div class="relative z-20 w-full flex flex-col items-center space-y-6" data-aos="fade-down" data-aos-duration="1200">
+                <!-- Cintillo superior formal -->
+                <div class="flex items-center gap-3 mb-1">
+                    <div class="h-[1px] w-8 bg-indigo-200/80 shadow-sm"></div>
+                    <span class="text-xs uppercase tracking-[0.4em] text-white font-bold subtext-protection-shadow">¡Mis Quince Años!</span>
+                    <div class="h-[1px] w-8 bg-indigo-200/80 shadow-sm"></div>
+                </div>
+
+                <!-- Nombre Principal con tipografía caligráfica floreada de alto contraste gracias a las sombras robustas -->
+                <h1 class="font-floreada text-6xl md:text-7xl text-white tracking-wide text-protection-shadow filter drop-shadow-lg py-2">
+                    Andrea Karina
+                </h1>
+
+                <!-- Separador de ballet estilizado -->
+                <div class="flex items-center justify-center gap-2 py-1">
+                    <i class="fa-solid fa-star text-[10px] text-white subtext-protection-shadow animate-pulse"></i>
+                </div>
+            </div>
+
+            <!-- Contenido inferior sobrepuesto (Desliza para ver) -->
+            <div class="relative z-20 w-full flex flex-col items-center space-y-2" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-white font-bold subtext-protection-shadow">
+                    Desliza para ver la invitación
+                </span>
+                <div class="scroll-mouse"></div>
+            </div>
+        </header>
+
+        <!-- TARJETA PERSONALIZADA DE INVITADO -->
+        <section id="guest-card-section" class="px-6 hidden" data-aos="fade-up" data-aos-duration="1200">
+            <div class="bg-white/90 backdrop-blur-md rounded-3xl p-6 md:p-8 border-2 border-dashed border-violet-300 text-center space-y-4 max-w-md mx-auto shadow-[0_10px_30px_rgba(99,102,241,0.06)]">
+                <div class="inline-flex items-center justify-center w-10 h-10 bg-violet-50 text-violet-600 rounded-full border border-violet-100">
+                    <i class="fa-solid fa-envelope text-base"></i>
+                </div>
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase tracking-[0.25em] text-gray-400 font-bold">Invitación Exclusiva Para:</p>
+                    <h3 id="guest-name-card" class="font-serif-elegant font-bold text-2xl text-indigo-950 py-1.5 tracking-wider">Nombre de Invitado</h3>
+                </div>
+                <div class="w-16 h-[1px] bg-violet-200 mx-auto"></div>
+                <div class="space-y-2">
+                    <p class="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">Pases de acceso reservados:</p>
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#7b51a8] to-indigo-700 text-white px-5 py-2 rounded-full font-serif-elegant font-bold text-base shadow-sm">
+                        <i class="fa-solid fa-ticket"></i>
+                        <span id="guest-passes-card">0 Pases</span>
+                    </div>
+                </div>
+                <p class="text-[9px] text-gray-400 font-medium">Por favor, confirma la cantidad total de personas que asistirán.</p>
+            </div>
+        </section>
+
+        <!-- PENSAMIENTO / FRASE DE ENTRADA -->
+        <section class="px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="w-12 h-12 text-violet-500/60 mx-auto mb-4">
+                <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
+                </svg>
+            </div>
+            <div class="max-w-md mx-auto">
+                <p class="font-serif-elegant italic text-lg md:text-xl text-indigo-950 leading-relaxed font-light">
+                    "Hay momentos en la vida que son únicos e inolvidables, pero compartirlos con quienes más amamos los hace eternos. Hoy celebro con inmensa gratitud la danza mágica de la vida."
+                </p>
+                <div class="mt-4 flex justify-center gap-1.5">
+                    <i class="fa-solid fa-circle text-[4px] text-indigo-200"></i>
+                    <i class="fa-solid fa-star text-[7px] text-[#7b51a8]"></i>
+                    <i class="fa-solid fa-circle text-[4px] text-indigo-200"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE NUESTROS PADRES Y PADRINOS (CORTE DE HONOR) -->
+        <section class="space-y-8 px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="max-w-md mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-3xl border border-violet-100 shadow-sm relative overflow-hidden space-y-6">
+                <!-- Cintillo superior en degradado lila-azul -->
+                <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#7b51a8] via-indigo-500 to-[#7b51a8]"></div>
+                
+                <!-- Con la bendición de... -->
+                <div class="space-y-1">
+                    <span class="font-serif-elegant font-bold text-lg uppercase tracking-widest text-indigo-600 block">Con la bendición de</span>
+                    <h3 class="font-serif-elegant text-[10px] uppercase tracking-[0.25em] text-gray-400 font-bold">Mis Queridos Padres</h3>
+                </div>
+
+                <!-- Padres -->
+                <div class="space-y-2">
+                    <p class="font-serif-elegant text-xl text-indigo-950 font-bold leading-relaxed">
+                        Pedro Angel López Monroy
+                    </p>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest font-serif-elegant font-semibold">y</p>
+                    <p class="font-serif-elegant text-xl text-indigo-950 font-bold leading-relaxed">
+                        Karina Ivonne Navarro Sánchez
+                    </p>
+                </div>
+
+                <!-- Separador ornamental -->
+                <div class="flex items-center justify-center gap-2 py-2">
+                    <div class="h-[1px] w-12 bg-indigo-100"></div>
+                    <i class="fa-solid fa-crown text-violet-500 text-xs"></i>
+                    <div class="h-[1px] w-12 bg-indigo-100"></div>
+                </div>
+
+                <!-- Padrinos -->
+                <div class="space-y-1">
+                    <h3 class="font-serif-elegant text-[10px] uppercase tracking-[0.25em] text-gray-400 font-bold">Y el valioso apoyo de mis Padrinos</h3>
+                </div>
+
+                <div class="space-y-2">
+                    <p class="font-serif-elegant text-xl text-indigo-950 font-bold leading-relaxed">
+                        Marycarmen Navarro Sánchez
+                    </p>
+                    <p class="text-xs text-gray-400 uppercase tracking-widest font-serif-elegant font-semibold">y</p>
+                    <p class="font-serif-elegant text-xl text-indigo-950 font-bold leading-relaxed">
+                        Amir Ramiro Guzmán Chávez
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CUENTA REGRESIVA CON FOTO DE FONDO -->
+        <section class="px-6" data-aos="fade-up" data-aos-duration="1200">
+            <div class="relative rounded-3xl overflow-hidden shadow-[0_15px_40px_rgba(99,102,241,0.15)] border border-violet-100 bg-cover bg-center text-center p-8 md:p-12 min-h-[360px] flex flex-col justify-center items-center" style="background-image: url('https://i.imgur.com/GYV8UAu.jpg');">
+                <!-- Máscara de cristal esmerilado violeta e índigo profundo para legibilidad total del contador -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#120e25]/80 to-[#141b3d]/80 backdrop-blur-[3px] z-0"></div>
+                
+                <div class="relative z-10 w-full space-y-6">
+                    <div class="flex items-center justify-center gap-2 text-indigo-200">
+                        <i class="fa-solid fa-hourglass-half text-sm animate-pulse"></i>
+                        <h3 class="font-serif-elegant text-lg text-white uppercase tracking-widest font-bold text-protection-shadow">
+                            Falta muy poco
+                        </h3>
+                    </div>
+                    
+                    <!-- Grid de tiempo de alto contraste -->
+                    <div class="grid grid-cols-4 gap-2.5 max-w-sm mx-auto">
+                        <div class="bg-white/10 backdrop-blur-md rounded-2xl py-3.5 border border-white/20 shadow-lg">
+                            <span id="days" class="block font-serif-elegant text-2xl md:text-3xl text-white font-bold tracking-tight">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-indigo-200 font-semibold">Días</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-2xl py-3.5 border border-white/20 shadow-lg">
+                            <span id="hours" class="block font-serif-elegant text-2xl md:text-3xl text-white font-bold tracking-tight">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-indigo-200 font-semibold">Horas</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-2xl py-3.5 border border-white/20 shadow-lg">
+                            <span id="minutes" class="block font-serif-elegant text-2xl md:text-3xl text-white font-bold tracking-tight">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-indigo-200 font-semibold">Mins</span>
+                        </div>
+                        <div class="bg-white/15 backdrop-blur-md rounded-2xl py-3.5 border border-violet-400/30 shadow-lg">
+                            <span id="seconds" class="block font-serif-elegant text-2xl md:text-3xl text-violet-300 font-extrabold tracking-tight">00</span>
+                            <span class="text-[9px] uppercase tracking-wider text-violet-200 font-semibold animate-pulse">Segs</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-white/95 font-semibold text-protection-shadow">Viernes, 09 de Octubre del 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CEREMONIA & RECEPCIÓN -->
+        <section class="space-y-10 px-6" id="evento-detalles">
+            <div class="text-center">
+                <div class="inline-block px-3 py-1 bg-violet-50 rounded-full border border-violet-100 mb-2">
+                    <span class="text-[9px] uppercase tracking-[0.25em] text-indigo-600 font-bold">Ubicaciones del Evento</span>
+                </div>
+                <h3 class="font-serif-elegant text-2xl md:text-3xl text-indigo-950 font-light">¿Dónde y Cuándo?</h3>
+            </div>
+
+            <div class="space-y-8 max-w-md mx-auto">
+                <!-- Ceremonia (Misa) -->
+                <div class="bg-white rounded-3xl p-6 shadow-[0_10px_35px_rgba(99,102,241,0.05)] border border-violet-100 flex flex-col justify-between text-center relative overflow-hidden group" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-indigo-500">
+                        <i class="fa-solid fa-church text-[10rem]"></i>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600 border border-violet-100">
+                            <i class="fa-solid fa-church text-base"></i>
+                        </div>
+                        <h4 class="font-serif-elegant text-xl text-indigo-950 tracking-wider font-bold uppercase">Misa de Acción de Gracias</h4>
+                        <div class="w-10 h-[1px] bg-violet-200 mx-auto"></div>
+                        
+                        <div class="space-y-1">
+                            <p class="text-[9px] uppercase tracking-wider text-gray-400 font-medium">Lugar</p>
+                            <p class="font-serif-elegant text-base text-[#7b51a8] font-bold">Templo de la Columna</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 bg-indigo-50/30 p-2.5 rounded-xl border border-indigo-100 my-2 text-xs">
+                            <div class="border-r border-indigo-100">
+                                <p class="text-[8px] uppercase tracking-wider text-gray-400">Fecha</p>
+                                <p class="font-bold text-indigo-950 text-[11px]">09 de Octubre, 2026</p>
+                            </div>
+                            <div>
+                                <p class="text-[8px] uppercase tracking-wider text-gray-400">Hora</p>
+                                <p class="font-bold text-indigo-950 text-[11px]">7:00 P.M.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <p class="text-[9px] uppercase tracking-wider text-gray-400 font-medium">Dirección</p>
+                            <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                Bartolomé de las Casas No. 16, Col. Centro. Morelia, Mich.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-violet-100">
+                        <a href="https://maps.google.com/?q=Templo+de+la+Columna+Morelia" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver Misa en el Mapa
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recepción -->
+                <div class="bg-white rounded-3xl p-6 shadow-[0_10px_35px_rgba(99,102,241,0.05)] border border-violet-100 flex flex-col justify-between text-center relative overflow-hidden group" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="absolute -right-10 -bottom-10 opacity-[0.03] text-indigo-500">
+                        <i class="fa-solid fa-glass-cheers text-[10rem]"></i>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600 border border-violet-100">
+                            <i class="fa-solid fa-glass-cheers text-base"></i>
+                        </div>
+                        <h4 class="font-serif-elegant text-xl text-indigo-950 tracking-wider font-bold uppercase">Recepción de Gala</h4>
+                        <div class="w-10 h-[1px] bg-violet-200 mx-auto"></div>
+                        
+                        <div class="space-y-1">
+                            <p class="text-[9px] uppercase tracking-wider text-gray-400 font-medium">Salón de Eventos</p>
+                            <p class="font-serif-elegant text-base text-[#7b51a8] font-bold">Fidenza</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2 bg-indigo-50/30 p-2.5 rounded-xl border border-indigo-100 my-2 text-xs">
+                            <div class="border-r border-indigo-100">
+                                <p class="text-[8px] uppercase tracking-wider text-gray-400">Fecha</p>
+                                <p class="font-bold text-indigo-950 text-[11px]">09 de Octubre, 2026</p>
+                            </div>
+                            <div>
+                                <p class="text-[8px] uppercase tracking-wider text-gray-400">Hora</p>
+                                <p class="font-bold text-indigo-950 text-[11px]">8:30 P.M.</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <p class="text-[9px] uppercase tracking-wider text-gray-400 font-medium">Dirección</p>
+                            <p class="text-[11px] text-gray-500 leading-relaxed font-medium">
+                                Alberto Bremauntz No. 1004, Col. Dr. Miguel Silva. Morelia, Mich.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-violet-100">
+                        <a href="https://maps.app.goo.gl/UtMYAEwo2UQPe4Fs9" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver Recepción en el Mapa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÓDIGO DE VESTIMENTA -->
+        <section class="px-6" data-aos="fade-up" data-aos-duration="1200">
+            <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-violet-100 text-center space-y-5 max-w-md mx-auto">
+                <div class="space-y-1">
+                    <i class="fa-solid fa-shirt text-indigo-600 text-lg mb-1"></i>
+                    <h3 class="font-serif-elegant text-xl md:text-2xl text-indigo-950 font-light uppercase tracking-wider">Código de Vestimenta</h3>
+                    <div class="w-12 h-[1px] bg-violet-200 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 max-w-xs mx-auto text-center pt-1">
+                    <div class="space-y-2 p-2.5 bg-white/80 rounded-xl border border-violet-100">
+                        <div class="w-8 h-8 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600">
+                            <i class="fa-solid fa-user-tie text-base"></i>
+                        </div>
+                        <p class="text-[9px] uppercase tracking-widest text-[#7b51a8] font-bold">Hombres</p>
+                        <p class="text-[11px] text-indigo-950 font-bold tracking-wider">TRAJE</p>
+                    </div>
+
+                    <div class="space-y-2 p-2.5 bg-white/80 rounded-xl border border-violet-100">
+                        <div class="w-8 h-8 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600">
+                            <i class="fa-solid fa-person-dress text-base"></i>
+                        </div>
+                        <p class="text-[9px] uppercase tracking-widest text-[#7b51a8] font-bold">Mujeres</p>
+                        <p class="text-[11px] text-indigo-950 font-bold tracking-wider">GALA</p>
+                    </div>
+                </div>
+
+                <p class="text-[9px] text-gray-400 italic font-medium">Agradecemos respetar el código sugerido para mantener la armonía de este gran día.</p>
+            </div>
+        </section>
+
+        <!-- GALERÍA DE FOTOS -->
+        <section class="space-y-6 px-6" id="galeria-seccion">
+            <div class="text-center">
+                <i class="fa-solid fa-camera text-indigo-600 text-base mb-1"></i>
+                <h3 class="font-serif-elegant text-2xl md:text-3xl text-indigo-950 font-light uppercase tracking-widest">Momentos Especiales</h3>
+                <p class="text-[9px] text-gray-400 mt-1 font-medium">Haz clic en cualquier imagen para ampliarla</p>
+            </div>
+
+            <!-- Grid de Galería -->
+            <div class="grid grid-cols-2 gap-3 max-w-md mx-auto" data-aos="fade-up" data-aos-duration="1200">
+                <!-- Foto 1 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/GntPaHg.jpg')">
+                    <img src="https://i.imgur.com/GntPaHg.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/GYV8UAu.jpg')">
+                    <img src="https://i.imgur.com/GYV8UAu.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/B0mSH0s.jpg')">
+                    <img src="https://i.imgur.com/B0mSH0s.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/dxc0JHO.jpg')">
+                    <img src="https://i.imgur.com/dxc0JHO.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/mFRLuRp.jpg')">
+                    <img src="https://i.imgur.com/mFRLuRp.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/GFuAAq9.jpg')">
+                    <img src="https://i.imgur.com/GFuAAq9.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
+                        <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MESA DE REGALOS -->
+        <section class="px-6" data-aos="fade-up" data-aos-duration="1200">
+            <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 border border-violet-100 shadow-[0_10px_35px_rgba(99,102,241,0.04)] space-y-6 max-w-md mx-auto">
+                <div class="text-center space-y-1">
+                    <i class="fa-solid fa-gift text-indigo-600 text-lg"></i>
+                    <h3 class="font-serif-elegant text-xl md:text-2xl text-indigo-950 font-light uppercase tracking-wider">Mesa de Regalos</h3>
+                    <p class="text-[11px] text-gray-500 max-w-xs mx-auto leading-relaxed">
+                        Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo, te comparto los códigos de mis mesas de regalos:
+                    </p>
+                    <div class="w-12 h-[1px] bg-violet-200 mx-auto mt-2"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Sears Card -->
+                    <div class="bg-[#fcfaff] rounded-xl p-4 border border-violet-100 text-center flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="w-8 h-8 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600 mb-1 border border-violet-100">
+                                <i class="fa-solid fa-bag-shopping text-sm"></i>
+                            </div>
+                            <p class="font-serif-elegant text-lg font-bold text-indigo-600 tracking-wider uppercase">SEARS</p>
+                            <p class="text-[9px] text-gray-400 mt-0.5 uppercase tracking-wider font-semibold">Número de Evento</p>
+                            <p id="code-sears" class="text-base font-serif-elegant font-bold text-indigo-950 mt-0.5 tracking-widest">264322</p>
+                        </div>
+                        <button onclick="copyToClipboard('264322', 'sears-btn')" id="sears-btn" class="w-full py-1.5 bg-white hover:bg-indigo-600 text-indigo-950 hover:text-white border border-violet-200 hover:border-transparent rounded-lg text-[9px] font-bold tracking-wider uppercase shadow-sm transition-all duration-300">
+                            <i class="fa-solid fa-copy mr-1"></i> Copiar
+                        </button>
+                    </div>
+
+                    <!-- Liverpool Card -->
+                    <div class="bg-[#fcfaff] rounded-xl p-4 border border-violet-100 text-center flex flex-col justify-between space-y-3">
+                        <div>
+                            <div class="w-8 h-8 bg-violet-50 rounded-full flex items-center justify-center mx-auto text-indigo-600 mb-1 border border-violet-100">
+                                <i class="fa-solid fa-store text-sm"></i>
+                            </div>
+                            <p class="font-serif-elegant text-lg font-bold text-indigo-600 tracking-wider uppercase">LIVERPOOL</p>
+                            <p class="text-[9px] text-gray-400 mt-0.5 uppercase tracking-wider font-semibold">Número de Evento</p>
+                            <p id="code-liverpool" class="text-base font-serif-elegant font-bold text-indigo-950 mt-0.5 tracking-widest">60008194</p>
+                        </div>
+                        <button onclick="copyToClipboard('60008194', 'liverpool-btn')" id="liverpool-btn" class="w-full py-1.5 bg-white hover:bg-indigo-600 text-indigo-950 hover:text-white border border-violet-200 hover:border-transparent rounded-lg text-[9px] font-bold tracking-wider uppercase shadow-sm transition-all duration-300">
+                            <i class="fa-solid fa-copy mr-1"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFIRMACIÓN DE ASISTENCIA (RSVP) -->
+        <section class="text-center space-y-6 px-6" id="confirmacion-seccion" data-aos="fade-up" data-aos-duration="1200">
+            <div class="space-y-2">
+                <i class="fa-solid fa-calendar-check text-indigo-600 text-lg"></i>
+                <h3 class="font-serif-elegant text-2xl md:text-3xl text-indigo-950 font-light uppercase tracking-widest">Confirmación</h3>
+                <div class="w-12 h-[1px] bg-violet-200 mx-auto"></div>
+                <p class="text-xs text-gray-500 max-w-xs mx-auto leading-relaxed">
+                    Para mí es de suma importancia contar con tu presencia en este día tan soñado. Por favor, confirma antes del:
+                </p>
+                <p class="text-base md:text-lg font-serif-elegant font-bold text-indigo-600 tracking-wider">
+                    11 de Septiembre de 2026
+                </p>
+            </div>
+
+            <!-- Botón WhatsApp Directo -->
+            <div class="pt-1">
+                <a id="whatsapp-confirm-btn" href="#" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold px-6 py-3.5 rounded-full shadow-[0_10px_25px_rgba(37,211,102,0.2)] hover:scale-[1.03] transition-all duration-300 text-[10px] uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-base"></i> Confirmar por WhatsApp
+                </a>
+                <p class="text-[10px] text-gray-400 mt-2 font-semibold">O al teléfono: 44-31-19-79-44</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="text-center pt-10 pb-8 border-t border-violet-100 space-y-4">
+            <div class="w-10 h-10 text-indigo-500 opacity-80 mx-auto">
+                <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
+                </svg>
+            </div>
+            <p class="font-serif-elegant font-bold text-xl uppercase tracking-widest text-[#7b51a8]">Dancemos con gratitud...</p>
+            <p class="text-[9px] uppercase tracking-[0.2em] text-gray-400">&copy; 2026 Andrea Karina López Navarro • Todos los derechos reservados</p>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX OVERLAY PARA LA GALERÍA -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-indigo-300 transition-colors duration-200" onclick="closeLightbox()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="relative max-w-4xl max-h-[85vh] overflow-hidden" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Ampliación" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl double-lila-border p-1 bg-white">
+        </div>
+    </div>
+
+    <!-- MENSAJE DE COPIADO EXITOSO (TOAST) -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 bg-[#0f172a]/95 backdrop-blur-sm text-white px-5 py-3 rounded-2xl shadow-lg border border-violet-300/30 text-xs font-semibold uppercase tracking-wider flex items-center gap-2 transform translate-y-24 opacity-0 transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-violet-400 text-sm"></i>
+        <span id="toast-text">Código copiado con éxito</span>
+    </div>
+
+    <!-- ADMINISTRADOR / GENERADOR DE ENLACES -->
+    <div id="admin-panel-widget" class="fixed bottom-6 left-6 z-40 hidden">
+        <button onclick="toggleAdminPanel()" class="w-12 h-12 rounded-full bg-gradient-to-r from-[#7b51a8] to-indigo-600 hover:from-[#5d3882] hover:to-indigo-700 text-white flex items-center justify-center shadow-lg hover:rotate-45 transition-all duration-300 border-2 border-white">
+            <i class="fa-solid fa-cog text-lg"></i>
+        </button>
+    </div>
+
+    <!-- MODAL DEL PANEL DE ADMINISTRACIÓN -->
+    <div id="admin-panel-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl p-6 md:p-8 max-w-md w-full border border-violet-300 shadow-2xl relative overflow-hidden space-y-4">
+            <div class="flex justify-between items-center pb-2 border-b border-gray-100">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-ticket-alt text-[#7b51a8]"></i>
+                    <h3 class="font-serif-elegant text-lg font-bold text-indigo-950">Invitación Madre</h3>
+                </div>
+                <button onclick="toggleAdminPanel()" class="text-gray-400 hover:text-red-500 text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <p class="text-[11px] text-gray-500 font-medium">Genera enlaces únicos y personalizados para tus invitados. Al abrir el enlace, el mini sitio se adaptará formalmente con su nombre y número de pases asignados.</p>
+
+            <div class="space-y-3 text-xs">
+                <!-- Nombre del Invitado -->
+                <div class="space-y-1">
+                    <label class="block font-semibold text-indigo-950">Nombre del Invitado:</label>
+                    <input type="text" id="admin-guest-name" placeholder="Ej: Familia Pérez González" class="w-full px-3 py-2 border border-violet-100 rounded-xl focus:outline-none focus:border-indigo-500">
+                </div>
+
+                <!-- Número de pases -->
+                <div class="space-y-1">
+                    <label class="block font-semibold text-indigo-950">Número de Pases:</label>
+                    <select id="admin-guest-passes" class="w-full px-3 py-2 border border-violet-100 rounded-xl focus:outline-none focus:border-indigo-500">
+                        <option value="1">1 Pase</option>
+                        <option value="2">2 Pases</option>
+                        <option value="3">3 Pases</option>
+                        <option value="4" selected>4 Pases</option>
+                        <option value="5">5 Pases</option>
+                        <option value="6">6 Pases</option>
+                        <option value="7">7 Pases</option>
+                        <option value="8">8 Pases</option>
+                        <option value="9">9 Pases</option>
+                        <option value="10">10 Pases</option>
+                    </select>
+                </div>
+
+                <!-- Celular opcional -->
+                <div class="space-y-1">
+                    <label class="block font-semibold text-indigo-950">Teléfono Invitado (Opcional - 10 dígitos):</label>
+                    <input type="tel" id="admin-guest-phone" placeholder="Ej: 4431234567" class="w-full px-3 py-2 border border-violet-100 rounded-xl focus:outline-none focus:border-indigo-500">
+                </div>
+
+                <!-- Botón de Generación -->
+                <button onclick="generateCustomInvitationLink()" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl uppercase tracking-wider transition-colors shadow-sm">
+                    Generar Invitación
+                </button>
+            </div>
+
+            <!-- Resultados del Generador -->
+            <div id="admin-generator-result" class="hidden space-y-3 pt-3 border-t border-gray-100">
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase font-bold text-indigo-600">Enlace Generado:</p>
+                    <div class="flex gap-2">
+                        <input type="text" id="admin-output-url" readonly class="w-full px-3 py-1.5 border border-gray-200 bg-gray-50 rounded-xl text-xs focus:outline-none">
+                        <button onclick="copyGeneratedLinkToClipboard()" class="bg-violet-100 text-[#7b51a8] hover:bg-indigo-600 hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition-all">
+                            <i class="fa-solid fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] uppercase font-bold text-green-600">Compartir Directo:</p>
+                    <a id="admin-whatsapp-direct" href="#" target="_blank" class="w-full py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Enviar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            AOS.init({
+                once: true,
+                duration: 1000
+            });
+            createEnvelopeParticles();
+            parseUrlParameters();
+        });
+
+        // Configuración de audio y control
+        const bgMusic = document.getElementById('bg-music');
+        const musicWidget = document.getElementById('music-widget');
+        const musicControlIcon = document.getElementById('music-control-icon');
+        const playingWave = document.getElementById('playing-wave');
+
+        // Parseador de parámetros de URL para personalización
+        let globalGuestName = '';
+        let globalGuestPasses = '';
+
+        function parseUrlParameters() {
+            const urlParams = new URLSearchParams(window.location.search);
+            globalGuestName = urlParams.get('g') || urlParams.get('guest') || '';
+            globalGuestPasses = urlParams.get('p') || urlParams.get('passes') || '';
+            const isAdmin = urlParams.get('admin') === '1' || urlParams.get('admin') === 'true';
+
+            if (globalGuestName) {
+                // Ajustar bienvenida en el sobre
+                document.getElementById('envelope-welcome-guest').classList.remove('hidden');
+                document.getElementById('envelope-guest-name').innerText = globalGuestName;
+
+                // Ajustar tarjeta de acceso personalizado dentro del sitio
+                document.getElementById('guest-card-section').classList.remove('hidden');
+                document.getElementById('guest-name-card').innerText = globalGuestName;
+                document.getElementById('guest-passes-card').innerText = globalGuestPasses ? `${globalGuestPasses} Pase${globalGuestPasses > 1 ? 's' : ''}` : 'Pases Reservados';
+
+                // Modificar el mensaje de confirmación de WhatsApp
+                const confirmBtn = document.getElementById('whatsapp-confirm-btn');
+                const encodedMessage = encodeURIComponent(
+                    `¡Hola Andrea Karina! Recibí tu hermosa invitación de XV años. Con mucha alegría confirmo mi asistencia a tu evento este 09 de Octubre para ${globalGuestName} (${globalGuestPasses ? globalGuestPasses : '1'} personas).`
+                );
+                confirmBtn.href = `https://wa.me/524431197944?text=${encodedMessage}`;
+            } else {
+                // Enlace genérico de confirmación
+                const confirmBtn = document.getElementById('whatsapp-confirm-btn');
+                const encodedMessage = encodeURIComponent(
+                    `¡Hola Andrea Karina! Recibí la hermosa invitación de tus XV años. Con mucha alegría confirmo mi asistencia al evento el 09 de Octubre.`
+                );
+                confirmBtn.href = `https://wa.me/524431197944?text=${encodedMessage}`;
+            }
+
+            if (isAdmin) {
+                document.getElementById('admin-panel-widget').classList.remove('hidden');
+            }
+        }
+
+        // Función para abrir la invitación
+        function revealInvitation() {
+            const welcomeEnvelope = document.getElementById('welcome-envelope');
+            welcomeEnvelope.classList.add('transition-all', 'duration-1000', 'opacity-0', 'pointer-events-none');
+            
+            const mainContent = document.getElementById('main-invitation-content');
+            mainContent.classList.remove('opacity-0');
+            mainContent.classList.add('opacity-100');
+
+            musicWidget.classList.remove('hidden');
+            playMusic();
+        }
+
+        function playMusic() {
+            bgMusic.play().then(() => {
+                musicControlIcon.className = "fa-solid fa-pause";
+                playingWave.style.opacity = "1";
+            }).catch((err) => {
+                console.log("Reproducción automática prevenida. El usuario iniciará manualmente.");
+                musicControlIcon.className = "fa-solid fa-play";
+                playingWave.style.opacity = "0.2";
+            });
+        }
+
+        // Control manual de reproducción
+        function toggleMusicPlayback() {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicControlIcon.className = "fa-solid fa-pause";
+                playingWave.style.opacity = "1";
+            } else {
+                bgMusic.pause();
+                musicControlIcon.className = "fa-solid fa-play";
+                playingWave.style.opacity = "0.2";
+            }
+        }
+
+        // Cuenta regresiva exacta para el 09 de Octubre de 2026 a las 19:00:00 (Misa de XV)
+        const targetDate = new Date("October 9, 2026 19:00:00").getTime();
+
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const daysLeft = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hoursLeft = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutesLeft = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const secondsLeft = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = daysLeft.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hoursLeft.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutesLeft.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = secondsLeft.toString().padStart(2, '0');
+        }, 1000);
+
+        // Copiado seguro al portapapeles sin alert() nativo
+        function copyToClipboard(textToCopy, buttonId) {
+            const tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            showToast("Código " + textToCopy + " copiado con éxito");
+
+            const originalBtn = document.getElementById(buttonId);
+            const originalHTML = originalBtn.innerHTML;
+            originalBtn.innerHTML = `<i class="fa-solid fa-check text-green-500"></i> ¡COPIADO!`;
+            originalBtn.classList.add('bg-violet-100');
+
+            setTimeout(() => {
+                originalBtn.innerHTML = originalHTML;
+                originalBtn.classList.remove('bg-violet-100');
+            }, 3000);
+        }
+
+        // Notificaciones flotantes (toast)
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-text").innerText = message;
+            toast.classList.remove("translate-y-24", "opacity-0");
+            toast.classList.add("translate-y-0", "opacity-100");
+
+            setTimeout(() => {
+                toast.classList.remove("translate-y-0", "opacity-100");
+                toast.classList.add("translate-y-24", "opacity-0");
+            }, 3500);
+        }
+
+        // Lógica de visualización de Galería (Lightbox)
+        function triggerLightbox(imgUrl) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightboxImg.src = imgUrl;
+            lightbox.classList.remove("opacity-0", "pointer-events-none");
+            lightbox.classList.add("opacity-100", "pointer-events-all");
+            document.body.classList.add("lightbox-active");
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            lightbox.classList.add("opacity-0", "pointer-events-none");
+            lightbox.classList.remove("opacity-100", "pointer-events-all");
+            document.body.classList.remove("lightbox-active");
+        }
+
+        // Generador sutil de partículas flotantes (corazones, estrellas, círculos)
+        function createEnvelopeParticles() {
+            const container = document.getElementById('envelope-particles');
+            const icons = ['fa-heart', 'fa-star', 'fa-circle'];
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('i');
+                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+                
+                particle.className = `fa-solid ${randomIcon} floating-particle text-indigo-400/20`;
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.fontSize = `${Math.random() * 12 + 6}px`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                particle.style.animationDuration = `${Math.random() * 12 + 8}s`;
+                
+                container.appendChild(particle);
+            }
+        }
+
+        // Alternador del panel de administración secreto
+        function toggleAdminPanel() {
+            const adminModal = document.getElementById('admin-panel-modal');
+            adminModal.classList.toggle('hidden');
+        }
+
+        // Lógica de Generación de Invitación Personalizada con pases
+        function generateCustomInvitationLink() {
+            const guestNameInput = document.getElementById('admin-guest-name').value.trim();
+            const guestPassesSelect = document.getElementById('admin-guest-passes').value;
+            const guestPhoneInput = document.getElementById('admin-guest-phone').value.trim();
+
+            if (!guestNameInput) {
+                showToast("Por favor, introduce el nombre del invitado");
+                return;
+            }
+
+            const baseUrl = window.location.origin + window.location.pathname;
+            const encodedName = encodeURIComponent(guestNameInput);
+            const generatedUrl = `${baseUrl}?g=${encodedName}&p=${guestPassesSelect}`;
+
+            document.getElementById('admin-output-url').value = generatedUrl;
+            document.getElementById('admin-generator-result').classList.remove('hidden');
+
+            const whatsappText = `¡Hola *${guestNameInput}*! Nos hace muy felices invitarte a los XV años de nuestra hija *Andrea Karina* López Navarro. 🩰✨ Te compartimos tu pase digital personalizado con todos los detalles del evento en este enlace: ${generatedUrl}`;
+            
+            let whatsappHref = `https://wa.me/?text=${encodeURIComponent(whatsappText)}`;
+            if (guestPhoneInput) {
+                let cleanedPhone = guestPhoneInput.replace(/\D/g, '');
+                if (cleanedPhone.length === 10) {
+                    cleanedPhone = '52' + cleanedPhone;
+                }
+                whatsappHref = `https://wa.me/${cleanedPhone}?text=${encodeURIComponent(whatsappText)}`;
+            }
+            
+            document.getElementById('admin-whatsapp-direct').href = whatsappHref;
+            showToast("¡Enlace personalizado generado!");
+        }
+
+        function copyGeneratedLinkToClipboard() {
+            const outputUrl = document.getElementById('admin-output-url');
+            outputUrl.select();
+            document.execCommand("copy");
+            showToast("¡Enlace personalizado copiado!");
+        }
+    </script>
+</body>
+</html>
