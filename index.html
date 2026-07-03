@@ -5,16 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>XV Años - Andrea Karina López Navarro</title>
     
+    <!-- Metaetiquetas de Optimización para Compartir (Open Graph / WhatsApp / Redes Sociales) -->
+    <meta name="description" content="Con la bendición de Dios y el amor de mis padres los invito a celebrar el inicio de mi cuento de hadas. ¡Te espero!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="XV Años - Andrea Karina López Navarro">
+    <meta property="og:description" content="Con la bendición de Dios y el amor de mis padres los invito a celebrar el inicio de mi cuento de hadas. ✨🩰">
+    <meta property="og:image" content="https://i.imgur.com/c7RVv86.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://chrfoto.github.io/Andy/">
+    <meta property="og:site_name" content="Invitación Digital de Andrea Karina">
+    
+    <!-- Twitter / otros crawlers -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XV Años - Andrea Karina López Navarro">
+    <meta name="twitter:description" content="Con la bendición de Dios y el amor de mis padres los invito a celebrar el inicio de mi cuento de hadas. ✨🩰">
+    <meta name="twitter:image" content="https://i.imgur.com/c7RVv86.jpg">
+
+    <!-- Preconectar servidores externos para optimizar velocidad de carga en GitHub Pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://i.imgur.com">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts: 
          - Great Vibes (Cursive/Floreada para la portada)
-         - Cormorant Garamond (Serif clásica formal de alta costura)
+         - Cormorant Gramond (Serif clásica formal de alta costura)
          - Montserrat (Sans-serif moderno y limpio para textos formales)
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- FontAwesome Icons -->
@@ -301,7 +322,7 @@
         <!-- SECCIÓN DE NUESTROS PADRES Y PADRINOS (CORTE DE HONOR) -->
         <section class="space-y-8 px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
             <div class="max-w-md mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-3xl border border-violet-100 shadow-sm relative overflow-hidden space-y-6">
-                <!-- Cintillo superior en degradado lila-azul -->
+                <!-- Outer Border / Accents -->
                 <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#7b51a8] via-indigo-500 to-[#7b51a8]"></div>
                 
                 <!-- Con la bendición de... -->
@@ -515,7 +536,7 @@
             </div>
         </section>
 
-        <!-- GALERÍA DE FOTOS (Con las nuevas imágenes actualizadas) -->
+        <!-- GALERÍA DE FOTOS -->
         <section class="space-y-6 px-6" id="galeria-seccion">
             <div class="text-center">
                 <i class="fa-solid fa-camera text-indigo-600 text-base mb-1"></i>
@@ -525,7 +546,7 @@
 
             <!-- Grid de Galería -->
             <div class="grid grid-cols-2 gap-3 max-w-md mx-auto" data-aos="fade-up" data-aos-duration="1200">
-                <!-- Foto 1 (Nueva Imagen: v9qALUA) -->
+                <!-- Foto 1 -->
                 <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/v9qALUA.jpg')">
                     <img src="https://i.imgur.com/v9qALUA.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
@@ -549,7 +570,7 @@
                     </div>
                 </div>
 
-                <!-- Foto 4 (Nueva Imagen: J8oKaqS) -->
+                <!-- Foto 4 -->
                 <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/J8oKaqS.jpg')">
                     <img src="https://i.imgur.com/J8oKaqS.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
@@ -924,6 +945,7 @@
             document.body.classList.add("lightbox-active");
         }
 
+        // Cerrar Lightbox
         function closeLightbox() {
             const lightbox = document.getElementById("lightbox");
             lightbox.classList.add("opacity-0", "pointer-events-none");
@@ -989,6 +1011,7 @@
             showToast("¡Enlace personalizado generado!");
         }
 
+        // Copiar enlace generado
         function copyGeneratedLinkToClipboard() {
             const outputUrl = document.getElementById('admin-output-url');
             outputUrl.select();
