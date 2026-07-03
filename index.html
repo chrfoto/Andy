@@ -52,12 +52,21 @@
             font-family: 'Great Vibes', cursive;
         }
 
-        /* Textura de fondo con gradiente dual: Azul índigo suave arriba, Lila suave abajo */
+        /* Textura de fondo con efecto de pinceladas de acuarela (azules y morados) fusionado con papel texturizado */
         .bg-ballet-texture {
-            background-image: linear-gradient(135deg, rgba(224, 231, 255, 0.94), rgba(243, 232, 255, 0.96)), url('https://i.imgur.com/r035ySS.jpg');
+            background-color: #f3f1f7;
+            background-image: 
+                /* Manchas de pinceladas de acuarela en degradados suaves */
+                radial-gradient(circle at 5% 15%, rgba(123, 81, 168, 0.16) 0%, rgba(123, 81, 168, 0) 40%),
+                radial-gradient(circle at 95% 30%, rgba(99, 102, 241, 0.14) 0%, rgba(99, 102, 241, 0) 45%),
+                radial-gradient(circle at 10% 60%, rgba(30, 58, 138, 0.1) 0%, rgba(30, 58, 138, 0) 35%),
+                radial-gradient(circle at 90% 80%, rgba(167, 139, 250, 0.18) 0%, rgba(167, 139, 250, 0) 40%),
+                radial-gradient(circle at 50% 50%, rgba(238, 223, 247, 0.5) 0%, rgba(224, 231, 255, 0.5) 100%),
+                url('https://i.imgur.com/r035ySS.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
+            background-blend-mode: multiply, normal;
         }
 
         /* Bordes y detalles en la nueva paleta */
@@ -151,12 +160,12 @@
 
         <!-- Cuerpo del sobre elegante -->
         <div class="relative max-w-lg w-full bg-white/95 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-[0_20px_50px_rgba(99,102,241,0.1)] border border-violet-100 text-center flex flex-col items-center z-10" data-aos="zoom-in" data-aos-duration="1200">
-            <!-- Icono de zapatillas de ballet en SVG color Lila/Azul -->
-            <div class="w-16 h-16 mb-6 text-violet-500 opacity-80">
+            <!-- Icono de brillitos (Sparkles) en SVG color Lila/Azul -->
+            <div class="w-16 h-16 mb-6 text-violet-500 opacity-80 animate-pulse">
                 <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
-                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
-                    <path d="M50,15 C52,20 56,23 62,23 C62,23 64,17 58,15 C54,13 51,14 50,15 Z" />
-                    <path d="M50,15 C48,20 44,23 38,23 C38,23 36,17 42,15 C46,13 49,14 50,15 Z" />
+                    <path d="M50,15 C50,35 30,50 10,50 C30,50 50,65 50,85 C50,65 70,50 90,50 C70,50 50,35 50,15 Z" />
+                    <path d="M25,25 C25,32 18,37 10,37 C18,37 25,42 25,49 C25,42 32,37 40,37 C32,37 25,32 25,25 Z" opacity="0.6"/>
+                    <path d="M75,70 C75,75 70,79 65,79 C70,79 75,83 75,88 C75,83 80,79 85,79 C80,79 75,75 75,70 Z" opacity="0.7"/>
                 </svg>
             </div>
 
@@ -209,12 +218,12 @@
     <!-- CONTENIDO DE LA INVITACIÓN -->
     <main id="main-invitation-content" class="min-h-screen opacity-0 transition-opacity duration-1000 max-w-xl mx-auto px-0 py-0 space-y-20 relative z-10 bg-[#f3f1f7]/60 shadow-2xl">
         
-        <!-- HEADER / PORTADA PRINCIPAL (Modificada para eliminar oscurecimiento y resaltar la foto) -->
+        <!-- HEADER / PORTADA PRINCIPAL -->
         <header class="relative w-full h-[100vh] min-h-[750px] flex flex-col justify-between items-center text-center overflow-hidden px-6 pb-14 pt-24">
             <!-- Capa con la imagen de fondo de Andrea Karina (Luminosidad 100% natural) -->
             <div class="absolute inset-0 bg-cover bg-center z-0" style="background-image: url('https://i.imgur.com/c7RVv86.jpg');"></div>
             
-            <!-- GRADIENTE DE TRANSICIÓN INFERIOR ÚNICAMENTE (No oscurece arriba, solo mezcla suavemente abajo) -->
+            <!-- GRADIENTE DE TRANSICIÓN INFERIOR ÚNICAMENTE -->
             <div class="absolute inset-0 z-10 bg-gradient-to-t from-[#f3f1f7] via-[#f3f1f7]/10 to-transparent to-50%"></div>
 
             <!-- Contenido superior sobrepuesto en la foto -->
@@ -226,14 +235,14 @@
                     <div class="h-[1px] w-8 bg-indigo-200/80 shadow-sm"></div>
                 </div>
 
-                <!-- Nombre Principal con tipografía caligráfica floreada de alto contraste gracias a las sombras robustas -->
+                <!-- Nombre Principal con tipografía caligráfica floreada de alto contraste -->
                 <h1 class="font-floreada text-6xl md:text-7xl text-white tracking-wide text-protection-shadow filter drop-shadow-lg py-2">
                     Andrea Karina
                 </h1>
 
-                <!-- Separador de ballet estilizado -->
+                <!-- Separador de brillitos animado -->
                 <div class="flex items-center justify-center gap-2 py-1">
-                    <i class="fa-solid fa-star text-[10px] text-white subtext-protection-shadow animate-pulse"></i>
+                    <i class="fa-solid fa-sparkles text-sm text-white subtext-protection-shadow animate-pulse"></i>
                 </div>
             </div>
 
@@ -272,12 +281,14 @@
         <section class="px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-12 h-12 text-violet-500/60 mx-auto mb-4">
                 <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
-                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
+                    <path d="M50,15 C50,35 30,50 10,50 C30,50 50,65 50,85 C50,65 70,50 90,50 C70,50 50,35 50,15 Z" />
+                    <path d="M25,25 C25,32 18,37 10,37 C18,37 25,42 25,49 C25,42 32,37 40,37 C32,37 25,32 25,25 Z" opacity="0.6"/>
+                    <path d="M75,70 C75,75 70,79 65,79 C70,79 75,83 75,88 C75,83 80,79 85,79 C80,79 75,75 75,70 Z" opacity="0.7"/>
                 </svg>
             </div>
             <div class="max-w-md mx-auto">
                 <p class="font-serif-elegant italic text-lg md:text-xl text-indigo-950 leading-relaxed font-light">
-                    "Hay momentos en la vida que son únicos e inolvidables, pero compartirlos con quienes más amamos los hace eternos. Hoy celebro con inmensa gratitud la danza mágica de la vida."
+                    "Con la bendición de Dios y el amor de mis padres los invito a celebrar el inicio de mi cuento de hadas"
                 </p>
                 <div class="mt-4 flex justify-center gap-1.5">
                     <i class="fa-solid fa-circle text-[4px] text-indigo-200"></i>
@@ -421,8 +432,8 @@
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-violet-100">
-                        <a href="https://maps.google.com/?q=Templo+de+la+Columna+Morelia" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
-                            <i class="fa-solid fa-map-location-dot"></i> Ver Misa en el Mapa
+                        <a href="https://maps.google.com/?q=Templo+de+la+Columna+Morelia" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
+                            <i class="fa-solid fa-map-location-dot"></i> Ubicación
                         </a>
                     </div>
                 </div>
@@ -465,8 +476,8 @@
                     </div>
 
                     <div class="mt-6 pt-4 border-t border-violet-100">
-                        <a href="https://maps.app.goo.gl/UtMYAEwo2UQPe4Fs9" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
-                            <i class="fa-solid fa-map-location-dot"></i> Ver Recepción en el Mapa
+                        <a href="https://maps.app.goo.gl/UtMYAEwo2UQPe4Fs9" target="_blank" class="inline-flex items-center gap-2 bg-violet-50 hover:bg-indigo-600 text-[#7b51a8] hover:text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-300 shadow-sm border border-violet-200">
+                            <i class="fa-solid fa-map-location-dot"></i> Ubicación
                         </a>
                     </div>
                 </div>
@@ -504,7 +515,7 @@
             </div>
         </section>
 
-        <!-- GALERÍA DE FOTOS -->
+        <!-- GALERÍA DE FOTOS (Con las nuevas imágenes actualizadas) -->
         <section class="space-y-6 px-6" id="galeria-seccion">
             <div class="text-center">
                 <i class="fa-solid fa-camera text-indigo-600 text-base mb-1"></i>
@@ -514,9 +525,9 @@
 
             <!-- Grid de Galería -->
             <div class="grid grid-cols-2 gap-3 max-w-md mx-auto" data-aos="fade-up" data-aos-duration="1200">
-                <!-- Foto 1 -->
-                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/GntPaHg.jpg')">
-                    <img src="https://i.imgur.com/GntPaHg.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                <!-- Foto 1 (Nueva Imagen: v9qALUA) -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/v9qALUA.jpg')">
+                    <img src="https://i.imgur.com/v9qALUA.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
                         <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
                     </div>
@@ -530,17 +541,17 @@
                     </div>
                 </div>
 
-                <!-- Foto 3 -->
-                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/B0mSH0s.jpg')">
-                    <img src="https://i.imgur.com/B0mSH0s.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                <!-- Foto 3 (Nueva Imagen: FQLI7ZW en reemplazo de B0mSH0s) -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/FQLI7ZW.jpg')">
+                    <img src="https://i.imgur.com/FQLI7ZW.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
                         <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
                     </div>
                 </div>
 
-                <!-- Foto 4 -->
-                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/dxc0JHO.jpg')">
-                    <img src="https://i.imgur.com/dxc0JHO.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
+                <!-- Foto 4 (Nueva Imagen: J8oKaqS) -->
+                <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/J8oKaqS.jpg')">
+                    <img src="https://i.imgur.com/J8oKaqS.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
                         <i class="fa-solid fa-magnifying-glass-plus text-white text-base"></i>
                     </div>
@@ -635,12 +646,17 @@
 
         <!-- FOOTER -->
         <footer class="text-center pt-10 pb-8 border-t border-violet-100 space-y-4">
+            <!-- Icono de brillitos (Sparkles) de pie de página -->
             <div class="w-10 h-10 text-indigo-500 opacity-80 mx-auto">
                 <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
-                    <path d="M50,15 C42,30 34,48 34,66 C34,76 41,80 47,81 C49,82 51,82 53,81 C59,80 66,76 66,66 C66,48 58,30 50,15 Z M50,26 C53,35 58,49 61,61 C56,59 50,58 50,58 C50,58 44,59 39,61 C42,49 47,35 50,26 Z M47,68 C45,68 43,66 43,64 C43,62 45,60 47,60 C49,60 51,62 51,64 C51,66 49,68 47,68 Z M53,68 C51,68 49,66 49,64 C49,62 51,60 53,60 C55,60 57,62 57,64 C57,66 55,68 53,68 Z"/>
+                    <path d="M50,15 C50,35 30,50 10,50 C30,50 50,65 50,85 C50,65 70,50 90,50 C70,50 50,35 50,15 Z" />
+                    <path d="M25,25 C25,32 18,37 10,37 C18,37 25,42 25,49 C25,42 32,37 40,37 C32,37 25,32 25,25 Z" opacity="0.6"/>
+                    <path d="M75,70 C75,75 70,79 65,79 C70,79 75,83 75,88 C75,83 80,79 85,79 C80,79 75,75 75,70 Z" opacity="0.7"/>
                 </svg>
             </div>
-            <p class="font-serif-elegant font-bold text-xl uppercase tracking-widest text-[#7b51a8]">Dancemos con gratitud...</p>
+            <p class="font-serif-elegant font-bold text-lg md:text-xl uppercase tracking-widest text-[#7b51a8] px-4 leading-relaxed">
+                Y colorín colorado, esta fiesta apenas va a comenzar...
+            </p>
             <p class="text-[9px] uppercase tracking-[0.2em] text-gray-400">&copy; 2026 Andrea Karina López Navarro • Todos los derechos reservados</p>
         </footer>
 
@@ -915,18 +931,18 @@
             document.body.classList.remove("lightbox-active");
         }
 
-        // Generador sutil de partículas flotantes (corazones, estrellas, círculos)
+        // Generador sutil de partículas flotantes (brillitos/estrellas)
         function createEnvelopeParticles() {
             const container = document.getElementById('envelope-particles');
-            const icons = ['fa-heart', 'fa-star', 'fa-circle'];
+            const icons = ['fa-star', 'fa-circle'];
             
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 20; i++) {
                 const particle = document.createElement('i');
                 const randomIcon = icons[Math.floor(Math.random() * icons.length)];
                 
-                particle.className = `fa-solid ${randomIcon} floating-particle text-indigo-400/20`;
+                particle.className = `fa-solid ${randomIcon} floating-particle text-indigo-300/25`;
                 particle.style.left = `${Math.random() * 100}vw`;
-                particle.style.fontSize = `${Math.random() * 12 + 6}px`;
+                particle.style.fontSize = `${Math.random() * 10 + 5}px`;
                 particle.style.animationDelay = `${Math.random() * 10}s`;
                 particle.style.animationDuration = `${Math.random() * 12 + 8}s`;
                 
@@ -958,7 +974,7 @@
             document.getElementById('admin-output-url').value = generatedUrl;
             document.getElementById('admin-generator-result').classList.remove('hidden');
 
-            const whatsappText = `¡Hola *${guestNameInput}*! Nos hace muy felices invitarte a los XV años de nuestra hija *Andrea Karina* López Navarro. 🩰✨ Te compartimos tu pase digital personalizado con todos los detalles del evento en este enlace: ${generatedUrl}`;
+            const whatsappText = `¡Hola *${guestNameInput}*! Nos hace muy felices invitarte a los XV años de nuestra hija *Andrea Karina* López Navarro. ✨ Te compartimos tu pase digital personalizado con todos los detalles del evento en este enlace: ${generatedUrl}`;
             
             let whatsappHref = `https://wa.me/?text=${encodeURIComponent(whatsappText)}`;
             if (guestPhoneInput) {
