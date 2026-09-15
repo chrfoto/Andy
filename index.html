@@ -322,7 +322,7 @@
         <!-- SECCIÓN DE NUESTROS PADRES Y PADRINOS (CORTE DE HONOR) -->
         <section class="space-y-8 px-6 text-center" data-aos="fade-up" data-aos-duration="1200">
             <div class="max-w-md mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-3xl border border-violet-100 shadow-sm relative overflow-hidden space-y-6">
-                <!-- Outer Border / Accents -->
+                <!-- Cintillo superior en degradado lila-azul -->
                 <div class="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[#7b51a8] via-indigo-500 to-[#7b51a8]"></div>
                 
                 <!-- Con la bendición de... -->
@@ -562,7 +562,7 @@
                     </div>
                 </div>
 
-                <!-- Foto 3 (Nueva Imagen: FQLI7ZW en reemplazo de B0mSH0s) -->
+                <!-- Foto 3 -->
                 <div class="overflow-hidden rounded-2xl shadow-md cursor-pointer relative group double-lila-border p-1 bg-white aspect-[3/4]" onclick="triggerLightbox('https://i.imgur.com/FQLI7ZW.jpg')">
                     <img src="https://i.imgur.com/FQLI7ZW.jpg" alt="Andrea Karina Sesión" class="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x600/f1f5f9/6366f1?text=Andrea+Karina'">
                     <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-xl">
@@ -649,10 +649,7 @@
                 <h3 class="font-serif-elegant text-2xl md:text-3xl text-indigo-950 font-light uppercase tracking-widest">Confirmación</h3>
                 <div class="w-12 h-[1px] bg-violet-200 mx-auto"></div>
                 <p class="text-xs text-gray-500 max-w-xs mx-auto leading-relaxed">
-                    Para mí es de suma importancia contar con tu presencia en este día tan soñado. Por favor, confirma antes del:
-                </p>
-                <p class="text-base md:text-lg font-serif-elegant font-bold text-indigo-600 tracking-wider">
-                    11 de Septiembre de 2026
+                    Para mí es de suma importancia contar con tu presencia en este día tan soñado. Por favor, confirma tu asistencia:
                 </p>
             </div>
 
@@ -945,7 +942,6 @@
             document.body.classList.add("lightbox-active");
         }
 
-        // Cerrar Lightbox
         function closeLightbox() {
             const lightbox = document.getElementById("lightbox");
             lightbox.classList.add("opacity-0", "pointer-events-none");
@@ -1011,7 +1007,6 @@
             showToast("¡Enlace personalizado generado!");
         }
 
-        // Copiar enlace generado
         function copyGeneratedLinkToClipboard() {
             const outputUrl = document.getElementById('admin-output-url');
             outputUrl.select();
